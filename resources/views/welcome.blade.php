@@ -4,7 +4,7 @@
             <h1 class="text-4xl font-bold">Let`s Find Your Next Job</h1>
             <form action="" class="mt-6">
                 <input type="text" placeholder="Accountant..."
-                       class="rounded-xl bg-white/20 border-white/10 px-5 py-4 w-full max-w-2xl">
+                       class="rounded-xl bg-white/20 border-white/10 px-5 py-2 w-full max-w-2xl">
             </form>
         </section>
         <section class="pt-10">
