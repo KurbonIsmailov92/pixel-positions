@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Emloyer;
+use App\Models\Employer;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,7 +13,7 @@ return new class extends Migration {
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(Emloyer::class);
+            $table->foreignIdFor(Employer::class);
             $table->string('title');
             $table->string('salary');
             $table->string('location');

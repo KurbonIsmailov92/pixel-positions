@@ -10,33 +10,27 @@
         <section class="pt-10">
             <x-section-headind>Featured Jobs</x-section-headind>
             <div class="grid lg:grid-cols-3 gap-8 mt-6">
-                <x-job-card/>
-                <x-job-card/>
-                <x-job-card/>
+                @foreach($featuredJobs as $job)
+                    <x-job-card :$job/>
+                @endforeach
             </div>
         </section>
 
         <section>
             <x-section-headind>Tags</x-section-headind>
             <div class="mt-6 space-x-1">
-                <x-tag>Frontend</x-tag>
-                <x-tag>Backend</x-tag>
-                <x-tag>Fullstack</x-tag>
-                <x-tag>Manager</x-tag>
-                <x-tag>Director</x-tag>
-                <x-tag>Video maker</x-tag>
-                <x-tag>Marketing</x-tag>
-                <x-tag>Driver</x-tag>
-                <x-tag>Account</x-tag>
-                <x-tag>Cashier</x-tag>
+                @foreach($tags as $tag)
+                    <x-tag :$tag/>
+                @endforeach
+
             </div>
         </section>
         <section>
             <x-section-headind>Recent Jobs</x-section-headind>
             <div class="mt-6 space-y-6">
-            <x-job-card-wide/>
-            <x-job-card-wide/>
-            <x-job-card-wide/>
+                @foreach($jobs as $job)
+                    <x-job-card-wide :$job/>
+                @endforeach
             </div>
 
         </section>

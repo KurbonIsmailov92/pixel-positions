@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Emloyer extends Model
+class Employer extends Model
 {
-    /** @use HasFactory<\Database\Factories\EmloyerFactory> */
+    /** @use HasFactory<\Database\Factories\EmployerFactory> */
     use HasFactory;
 
     public function user()
