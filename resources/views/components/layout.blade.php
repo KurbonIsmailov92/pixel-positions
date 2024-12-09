@@ -13,7 +13,7 @@
           rel="stylesheet">
     @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
-<body class="bg-black text-white font-hanken-grtoesk pd-10">
+<body class="bg-black text-white font-hanken-grtoesk pd-15">
 <div class="px-10">
     <nav class="flex justify-between items-center py-4 border-b border-white/10">
         <div>
@@ -30,15 +30,20 @@
             <a href="#">Companies</a>
         </div>
         @auth
-            <div>
+            <div class="space-x-6 flex">
                 <a href="jobs/create">Post a Job</a>
+                <form method="POST" action="/logout">
+                    @csrf
+                    @method('DELETE')
+                    <button class=" hover:text-red-500">Log Out</button>
+                </form>
             </div>
         @endauth
 
         @guest
             <div class="space-x-6">
-            <a href="/register">Sign Up</a>
-            <a href="/login">Log In</a>
+                <a href="/register">Sign Up</a>
+                <a href="/login">Log In</a>
             </div>
         @endguest
 
